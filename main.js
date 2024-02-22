@@ -1,5 +1,9 @@
-const album = document.getElementById('album')
+const album = document.getElementById("album");
 
-const URL = 'https://api.discogs.com/releases/28742893'
+const albumURL = "https://api.discogs.com/releases/28742893";
 
-const discogsFetch = 
+const discogsFetch = async () => {
+  const response = await fetch(albumURL);
+  const data = await response.json();
+  console.log(data);
+};
