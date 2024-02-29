@@ -3,11 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Discogs API project</title>
-    <script src="./main.js" defer></script>
+    <title>Occult Sex Worker</title>
+    <link
+      rel="shortcut icon"
+      href="./Images/riteslogo.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./main.js"></script>
   </head>
   <body>
-    <div id="artist"></div>
-    <div id="album"></div>
+    <!-- SPLASHSCREEN -->
+
+    <div id="splashscreen">
+      <img
+        id="splashscreen-image"
+        src="./Images/ritesband1.jpg"
+        alt="Splashscreen Image"
+      />
+    </div>
+
+    <div id="content" style="display: none">
+      <!-- HEADER -->
+
+      <header id="header">
+        <img src="./Images/riteslogo.jpg" alt="Band Logo" />
+        <h1 id="bandName">Band Name</h1>
+      </header>
+
+      <!-- MAIN SECTION -->
+
+      <main>
+        <div id="albumInfo">
+          <div id="albumArt"></div>
+          <div id="albumDetails"></div>
+        </div>
+
+        <div id="tracklist"></div>
+      </main>
+
+      <!-- FOOTER -->
+
+      <footer id="footer"></footer>
+    </div>
   </body>
 </html>
