@@ -28,6 +28,8 @@ const displayAlbumInfo = async () => {
   const albumImage = document.createElement("img");
   albumImage.src = albumData.images[0].uri;
   albumArt.appendChild(albumImage);
+  console.log(albumData.images[0].uri);
+  console.log(albumData);
 
   // ALBUM DETAILS
 
