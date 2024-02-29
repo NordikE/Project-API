@@ -68,6 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //  10 SECONDS TIMER
-timerContent(() => {
+setTimeout(() => {
   showContent();
 }, 10000);
