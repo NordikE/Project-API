@@ -1,7 +1,21 @@
+.body {
+  margin: 0;
+  padding: 0;
+}
+
 /* SPLASHSCREEN */
 
 #splashscreen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #d91159;
+}
+
+#splashscreen img {
+  width: 1400px;
 }
 
 /* HEADER */
