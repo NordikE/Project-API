@@ -12,22 +12,25 @@ const fetchAlbumData = async () => {
   }
 };
 
-// DISPLAY ALBUM INFORMATION ON PAGE
+// DISPLAY ALBUM INFORMATION
 
 const displayAlbumInfo = async () => {
   const albumData = await fetchAlbumData();
   if (!albumData) return;
 
-  // UPDATE BAND NAME IN HEADER
+  // BAND NAME IN HEADER
+
   document.getElementById("bandName").textContent = albumData.artists[0].name;
 
-  // UPDATE ALBUM ART
+  // ALBUM ART
+
   const albumArt = document.getElementById("albumArt");
   const albumImage = document.createElement("img");
   albumImage.src = albumData.images[0].uri;
   albumArt.appendChild(albumImage);
 
-  // UPDATE ALBUM DETAILS
+  // ALBUM DETAILS
+
   const albumDetails = document.getElementById("albumDetails");
   albumDetails.innerHTML = `
     <p><strong>Album Name:</strong> ${albumData.title}</p>
@@ -36,6 +39,7 @@ const displayAlbumInfo = async () => {
   `;
 
   // UPDATE TRACKLIST
+
   const tracklist = document.getElementById("tracklist");
   tracklist.innerHTML = "<h2>Tracklist</h2>";
   albumData.tracklist.forEach((track) => {
@@ -43,24 +47,27 @@ const displayAlbumInfo = async () => {
   });
 
   // SHOW CONTENT DIV
+
   const splashscreenDiv = document.getElementById("splashscreen");
   const contentDiv = document.getElementById("content");
   splashscreenDiv.style.display = "none";
   contentDiv.style.display = "block";
 };
 
-// FUNCTION TO SHOW CONTENT AFTER SPLASHSCREEN CLICK OR TIMEOUT
+// CONTENT AFTER SPLASHSCREEN CLICK/ TIMEOUT
+
 const showContent = () => {
   displayAlbumInfo();
 };
 
-// ADD EVENT LISTENER TO SPLASHSCREEN IMAGE
+// EVENT LISTENER FOR SPLASHSCREEN IMAGE
+
 document.addEventListener("DOMContentLoaded", () => {
   const splashscreenImage = document.getElementById("splashscreen-image");
   splashscreenImage.addEventListener("click", showContent);
 });
 
-// SET TIMEOUT TO SHOW CONTENT AFTER 10 SECONDS EVEN IF THE SPLASHSCREEN IS NOT CLICKED
-setTimeout(() => {
+//  10 SECONDS TIMER
+timerContent(() => {
   showContent();
 }, 10000);
