@@ -15,12 +15,15 @@
 }
 
 #splashscreen img {
-  width: 1400px;
+  width: 80vw;
+  height: auto;
 }
 
 /* HEADER */
 
 #header {
+  display: flex;
+  justify-content: space-between;
   background-color: #d91159;
   color: #208380;
   text-align: center;
@@ -31,6 +34,10 @@
 #header img {
   width: 100px;
   height: 100px;
+}
+
+#header h1 {
+  padding-right: 40rem;
 }
 
 /* ALBUM INFO */

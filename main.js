@@ -2,7 +2,7 @@
 
 const fetchAlbumData = async () => {
   try {
-    const albumURL = "https://api.discogs.com/releases/28742893"; // REPLACE WITH YOUR ALBUM URL
+    const albumURL = "https://api.discogs.com/releases/28742893";
     const response = await fetch(albumURL);
     const data = await response.json();
     return data;
