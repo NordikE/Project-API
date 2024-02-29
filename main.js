@@ -17,6 +17,7 @@ const fetchAlbumData = async () => {
 const displayAlbumInfo = async () => {
   const albumData = await fetchAlbumData();
   if (!albumData) return;
+  console.log(albumData);
 
   // BAND NAME IN HEADER
 
@@ -29,7 +30,6 @@ const displayAlbumInfo = async () => {
   albumImage.src = albumData.images[0].uri;
   albumArt.appendChild(albumImage);
   console.log(albumData.images[0].uri);
-  console.log(albumData);
 
   // ALBUM DETAILS
 
@@ -72,4 +72,4 @@ document.addEventListener("DOMContentLoaded", () => {
 //  10 SECONDS TIMER
 setTimeout(() => {
   showContent();
-}, 10000);
+}, 2000);
