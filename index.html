@@ -11,10 +11,15 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <script type="module" src="./main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- SPLASHSCREEN -->
-
     <div id="splashscreen">
       <img
         id="splashscreen-image"
@@ -23,27 +28,43 @@
       />
     </div>
 
-    <div id="content">
+    <div id="content" style="display: none">
       <!-- HEADER -->
-
-      <header id="header">
+      <header id="header" class="league-blue">
         <img src="./Images/riteslogo.jpg" alt="Band Logo" />
         <h1 id="bandName">Band Name</h1>
       </header>
 
       <!-- MAIN SECTION -->
-
       <main>
         <div id="albumInfo">
-          <div id="albumArt"></div>
+          <div id="albumArt" class="albumImages">
+            <img src="./Images/ritesalbum1.jpg" alt="Front of album" />
+          </div>
           <div id="albumDetails"></div>
         </div>
 
-        <div id="tracklist"></div>
+        <!-- ALBUM BACK IMAGE AND TRACKLIST CONTAINER -->
+        <div id="albumBackAndTracklist" class="albumContainer">
+          <!-- ALBUM BACK IMAGE -->
+          <div id="albumArtBack" class="albumImages">
+            <img src="./Images/ritesalbum2.jpg" alt="Back of album" />
+          </div>
+
+          <!-- TRACKLIST -->
+          <div id="tracklist">
+            <h2>Tracklist</h2>
+            <ul>
+              <li>
+                <span class="track-number">1.</span> Dependency
+                <span class="track-length">(01:23)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </main>
 
       <!-- FOOTER -->
-
       <footer id="footer"></footer>
     </div>
   </body>
