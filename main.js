@@ -17,12 +17,12 @@ const displayAlbumInfo = async () => {
   const albumData = await fetchAlbumData();
   if (!albumData) return;
 
+  // Set band name in footer
+  document.getElementById("bandName").textContent = albumData.artists[0].name;
+
   console.log("Band Name:", albumData.artists[0].name);
   console.log("Album Year:", albumData.year);
   console.log("Label:", albumData.labels[0].name);
-
-  // BAND NAME IN HEADER
-  document.getElementById("bandName").textContent = albumData.artists[0].name;
 
   // ALBUM ART
   const albumArt = document.getElementById("albumArt");
@@ -33,20 +33,20 @@ const displayAlbumInfo = async () => {
   // ALBUM DETAILS
   const albumDetails = document.getElementById("albumDetails");
 
-  // LABEL LINK
+  // LABEL LINKS
   const labelLinks = albumData.labels
     .map((label) => {
       const discogsURI = label.resource_url
         .replace("api.", "")
         .replace("/releases", "");
-      return `<a href="${discogsURI}" target="_blank">${label.name}</a>`;
+      return `<a class="league-blue" href="${discogsURI}" target="_blank">${label.name}</a>`;
     })
     .join(", ");
 
   albumDetails.innerHTML = `
-    <h2><strong>Album Name:</strong> <a href="${albumData.uri}" target="_blank">${albumData.title}</a></h2>
-    <h3><strong>Year:</strong> ${albumData.year}</h3>
-    <h3><strong>Label:</strong> ${labelLinks}</h3>
+    <h2 class="league-blue-large"><strong>Album Name:</strong> <a class="league-blue-large" href="${albumData.uri}" target="_blank">${albumData.title}</a></h2>
+    <p><strong>Year:</strong> ${albumData.year}</p>
+    <p><strong>Label:</strong> ${labelLinks}</p>
   `;
 
   // UPDATE TRACKLIST
