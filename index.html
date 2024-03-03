@@ -30,31 +30,37 @@
 
     <div id="content" style="display: none">
       <!-- HEADER -->
-      <header id="header" class="league-blue">
-        <img src="./Images/riteslogo.jpg" alt="Band Logo" />
-        <h1 id="bandName">Band Name</h1>
+      <header id="header">
+        <img
+          src="./Images/ritesbanner.png"
+          alt="Band banner with Sax, Drag and Rock'n'Roll tagline"
+        />
       </header>
 
       <!-- MAIN SECTION -->
       <main>
         <div id="albumInfo">
           <div id="albumArt" class="albumImages">
+            <p>Front:</p>
             <img src="./Images/ritesalbum1.jpg" alt="Front of album" />
           </div>
-          <div id="albumDetails"></div>
+          <div id="albumOverview">
+            <div id="albumDetails" class="league-blue"></div>
+          </div>
         </div>
 
         <!-- ALBUM BACK IMAGE AND TRACKLIST CONTAINER -->
         <div id="albumBackAndTracklist" class="albumContainer">
           <!-- ALBUM BACK IMAGE -->
           <div id="albumArtBack" class="albumImages">
+            <p>Back:</p>
             <img src="./Images/ritesalbum2.jpg" alt="Back of album" />
           </div>
 
           <!-- TRACKLIST -->
-          <div id="tracklist">
+          <div id="tracklist" class="league-blue">
             <h2>Tracklist</h2>
-            <ul>
+            <ul class="league-blue">
               <li>
                 <span class="track-number">1.</span> Dependency
                 <span class="track-length">(01:23)</span>
@@ -65,7 +71,11 @@
       </main>
 
       <!-- FOOTER -->
-      <footer id="footer"></footer>
+      <footer id="footer">
+        <div id="bandname">
+          <p>©<span id="bandName">Band Name</span></p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
