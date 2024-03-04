@@ -12,17 +12,33 @@ const fetchAlbumData = async () => {
   }
 };
 
+// FETCH LABEL LINK
+const fetchLabelLinks = async (albumData) => {
+  try {
+    const labelLinksData = fetch(albumData.labels[0].resource_url);
+    const response = await labelLinksData;
+    const data = await response.json();
+    console.log("labelLink data: ", data);
+    console.log("labelLink to use: ", data.uri);
+    albumData.labelLink = data.uri;
+  } catch (error) {
+    console.error("ERROR FETCHING LABEL DATA:", error);
+    albumData.labelLink = null;
+  }
+};
+
 // DISPLAY ALBUM INFORMATION
 const displayAlbumInfo = async () => {
   const albumData = await fetchAlbumData();
   if (!albumData) return;
 
-  // Set band name in footer
+  // SET BAND NAME IN FOOTER
   document.getElementById("bandName").textContent = albumData.artists[0].name;
 
   console.log("Band Name:", albumData.artists[0].name);
   console.log("Album Year:", albumData.year);
   console.log("Label:", albumData.labels[0].name);
+  console.log("labelLink to use:", albumData.labelLink);
 
   // ALBUM ART
   const albumArt = document.getElementById("albumArt");
@@ -30,19 +46,15 @@ const displayAlbumInfo = async () => {
   albumImage.src = albumData.images[0].uri;
   albumArt.appendChild(albumImage);
 
+  // LABEL LINKS
+  await fetchLabelLinks(albumData);
+  let labelLinks = "";
+  if (albumData.labelLink) {
+    labelLinks = `<a class="league-blue" href="${albumData.labelLink}" target="_blank">${albumData.labels[0].name}</a>`;
+  }
+
   // ALBUM DETAILS
   const albumDetails = document.getElementById("albumDetails");
-
-  // LABEL LINKS
-  const labelLinks = albumData.labels
-    .map((label) => {
-      const discogsURI = label.resource_url
-        .replace("api.", "")
-        .replace("/releases", "");
-      return `<a class="league-blue" href="${discogsURI}" target="_blank">${label.name}</a>`;
-    })
-    .join(", ");
-
   albumDetails.innerHTML = `
     <h2 class="league-blue-large"><strong>Album Name:</strong> <a class="league-blue-large" href="${albumData.uri}" target="_blank">${albumData.title}</a></h2>
     <p><strong>Year:</strong> ${albumData.year}</p>
