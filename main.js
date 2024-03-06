@@ -56,7 +56,7 @@ const displayAlbumInfo = async () => {
   // ALBUM DETAILS
   const albumDetails = document.getElementById("albumDetails");
   albumDetails.innerHTML = `
-    <h2 class="league-blue-large"><strong>Album Name:</strong> <a class="league-blue-large" href="${albumData.uri}" target="_blank">${albumData.title}</a></h2>
+    <h2 class="league-blue-lrg"><strong>Album Name:</strong> <a class="league-blue-lrg" href="${albumData.uri}" target="_blank">${albumData.title}</a></h2>
     <p><strong>Year:</strong> ${albumData.year}</p>
     <p><strong>Label:</strong> ${labelLinks}</p>
   `;
@@ -65,7 +65,7 @@ const displayAlbumInfo = async () => {
   const tracklist = document.getElementById("tracklist");
   tracklist.innerHTML = "<h2>Tracklist</h2>";
   albumData.tracklist.forEach((track) => {
-    tracklist.innerHTML += `<p><strong>${track.position}.</strong> ${track.title} <small>(${track.duration})</small></p>`;
+    tracklist.innerHTML += `<p class="league-blue-sml"><strong>${track.position}.</strong> ${track.title} <small>(${track.duration})</small></p>`;
   });
 
   // SHOW CONTENT DIV

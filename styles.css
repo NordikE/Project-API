@@ -17,7 +17,7 @@
   font-size: 2.5rem;
 }
 
-.league-blue-large {
+.league-blue-lrg {
   color: #0131ff;
   font-family: "League Gothic", sans-serif;
   font-size: 4rem;
@@ -25,7 +25,15 @@
   text-transform: uppercase;
 }
 
-.league-blue-large a {
+.league-blue-sml {
+  color: #0131ff;
+  font-family: "League Gothic", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.league-blue-lrg a {
   font-size: 4rem;
 }
 
