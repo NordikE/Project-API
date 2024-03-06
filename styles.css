@@ -37,7 +37,7 @@
   font-size: 4rem;
 }
 
-.albumSide {
+.montserr {
   color: #0131ff;
   font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
@@ -107,14 +107,18 @@ main {
   }
 }
 
+.albumSide {
+  margin-left: 2rem;
+}
+
 #albumDetails {
   margin-left: 2rem;
 }
 
 /* ALBUM ART */
 .albumImages {
-  width: 20rem;
-  height: 20rem;
+  width: 25rem;
+  height: 25rem;
   overflow: hidden;
   border-radius: 0.75rem;
 }
@@ -136,8 +140,8 @@ main {
 
 /* TRACKLIST */
 #tracklist {
-  width: 50%;
-  margin-left: 2rem;
+  /* width: 50%; */
+  margin: 0 2rem;
 }
 
 #tracklist ul {
@@ -155,6 +159,14 @@ main {
 
 .track-length {
   font-style: italic;
+}
+
+/* BAND LINE UP IMAGE */
+#bandLineUp {
+  height: 25rem;
+  width: auto;
+  overflow: hidden;
+  border-radius: 0.75rem;
 }
 
 /* FOOTER */
