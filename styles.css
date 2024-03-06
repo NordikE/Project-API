@@ -89,10 +89,13 @@ main {
 
 /* ALBUM INFO */
 .albumInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
   border: 0.5rem solid #0131ff;
   border-radius: 2rem;
   padding: 1rem;
-  display: flex;
   align-items: center;
 }
 
