@@ -39,9 +39,9 @@
 
 .albumSide {
   color: #0131ff;
-  font-family: "League Gothic", sans-serif;
-  font-size: 1rem;
-  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
 }
 
 /* SPLASHSCREEN */
@@ -73,8 +73,10 @@
   width: auto;
 }
 
-#header h1 {
-  padding-right: 24rem;
+@media (max-width: 600px) {
+  #header {
+    display: none;
+  }
 }
 
 /* MAIN */
@@ -114,7 +116,6 @@ main {
   width: 20rem;
   height: 20rem;
   overflow: hidden;
-
   border-radius: 0.75rem;
 }
 
