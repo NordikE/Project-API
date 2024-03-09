@@ -1,46 +1,46 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #ffacc9;
+  background-color: #ffffff;
 }
 
 /* FONTS */
 .league-blue {
-  color: #0131ff;
-  font-family: "League Gothic", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.league-blue a {
-  font-size: 2.5rem;
-}
-
-.league-blue-lrg {
-  color: #0131ff;
-  font-family: "League Gothic", sans-serif;
-  font-size: 4rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-.league-blue-sml {
-  color: #0131ff;
+  color: #161a1d;
   font-family: "League Gothic", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   text-transform: uppercase;
 }
 
+.league-blue a {
+  font-size: 1.5rem;
+}
+
+.league-blue-lrg {
+  color: #161a1d;
+  font-family: "League Gothic", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.league-blue-sml {
+  color: #161a1d;
+  font-family: "League Gothic", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 .league-blue-lrg a {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .montserr {
-  color: #0131ff;
+  color: #161a1d;
   font-family: "Montserrat", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.5rem;
   font-weight: 400;
 }
 
@@ -64,7 +64,7 @@
 #header {
   display: flex;
   justify-content: center;
-  background-color: #d91159;
+  background-color: #f10b11;
   text-align: center;
 }
 
@@ -81,7 +81,8 @@
 
 /* MAIN */
 main {
-  min-height: calc(100vh - 1rem);
+  max-width: 1440px;
+  min-height: calc(100vh - 10rem);
   margin: 2.5rem;
   display: flex;
   flex-direction: column;
@@ -95,8 +96,8 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 1rem;
-  border: 0.5rem solid #0131ff;
-  border-radius: 2rem;
+  border: 0.5rem solid #161a1d;
+  border-radius: 0.5rem;
   padding: 1rem;
   align-items: center;
 }
@@ -117,10 +118,10 @@ main {
 
 /* ALBUM ART */
 .albumImages {
-  width: 25rem;
-  height: 25rem;
+  width: 15rem;
+  height: 15rem;
   overflow: hidden;
-  border-radius: 0.75rem;
+  border-radius: 0.25rem;
 }
 
 .albumImages img {
@@ -131,8 +132,6 @@ main {
 
 /* ALBUM BACK IMAGE AND TRACKLIST CONTAINER */
 #albumBackAndTracklist {
-  border: 0.5rem solid #0131ff;
-  border-radius: 2rem;
   padding: 1rem;
   margin-top: 2rem;
   display: flex;
@@ -153,17 +152,17 @@ main {
   margin-bottom: 0.5rem;
 }
 
-.track-number {
+/* .track-number {
   font-weight: bold;
 }
 
 .track-length {
   font-style: italic;
-}
+} */
 
 /* BAND LINE UP IMAGE */
 #bandLineUp {
-  height: 25rem;
+  height: 15rem;
   width: auto;
   overflow: hidden;
   border-radius: 0.75rem;
@@ -171,13 +170,14 @@ main {
 
 /* FOOTER */
 #footer {
-  background-color: #d91159;
-  color: #9ac6c5;
+  padding-top: 4rem;
+  background-color: #f10b11;
   font-size: 1rem;
   text-align: center;
   height: 5rem;
 }
 
-#bandname {
+#footertext p {
+  background-color: #f10b11;
   margin-top: 2rem;
 }
