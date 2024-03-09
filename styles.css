@@ -5,7 +5,7 @@
 }
 
 /* FONTS */
-.league-blue {
+.league-black {
   color: #161a1d;
   font-family: "League Gothic", sans-serif;
   font-size: 1.5rem;
@@ -13,11 +13,11 @@
   text-transform: uppercase;
 }
 
-.league-blue a {
+.league-black a {
   font-size: 1.5rem;
 }
 
-.league-blue-lrg {
+.league-black-lrg {
   color: #161a1d;
   font-family: "League Gothic", sans-serif;
   font-size: 2.5rem;
@@ -25,7 +25,7 @@
   text-transform: uppercase;
 }
 
-.league-blue-sml {
+.league-black-sml {
   color: #161a1d;
   font-family: "League Gothic", sans-serif;
   font-size: 1em;
@@ -33,7 +33,7 @@
   text-transform: uppercase;
 }
 
-.league-blue-lrg a {
+.league-black-lrg a {
   font-size: 2.5rem;
 }
 
