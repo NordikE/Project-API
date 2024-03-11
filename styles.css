@@ -126,12 +126,7 @@ main {
   object-fit: cover;
 }
 
-/* ALBUM BACK IMAGE AND TRACKLIST CONTAINER */
-#albumBackAndTracklist {
-  padding: 1rem;
-  margin-top: 2rem;
-  display: flex;
-}
+/* TRACKLIST CONTAINER */
 
 /* TRACKLIST */
 #tracklist {
